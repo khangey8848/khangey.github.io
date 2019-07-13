@@ -1,93 +1,101 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" >
+
 <title>大学时的一些日记 | Gridea</title>
-<link rel="shortcut icon" href="https://khangey.github.io//favicon.ico?v=1563009507755">
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://khangey.github.io//favicon.ico?v=1563009565391">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://khangey.github.io//styles/main.css">
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://khangey.github.io/">
-  <img class="avatar" src="https://khangey.github.io//images/avatar.png?v=1563009507755" alt="">
-  </a>
-  <h1 class="site-title">
-    Gridea
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://khangey.github.io/">
+        <img src="https://khangey.github.io//images/avatar.png?v=1563009565391" class="site-logo">
+        <h1 class="site-title">Gridea</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
       
-        <a href="/" class="menu">
-          首页
-        </a>
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
       
-    
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
       
-        <a href="/archives" class="menu">
-          归档
-        </a>
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
       
-    
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
       
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
+    </div>
   </div>
-  <div class="social-container">
-    
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
       
-    
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://khangey.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
   </div>
 </div>
 
 
-        <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              大学时的一些日记
-            </h2>
-            <div class="post-info">
-              <time class="post-time">
-                · 2019-07-13 ·
-              </time>
-              
-                <a href="https://khangey.github.io//tag/sui-yue-jing-hao" class="post-tag">
-                  # 岁月静好
-                </a>
-              
-            </div>
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">大学时的一些日记</h2>
+            <div class="post-date">2019-07-13</div>
             
-              <div class="post-feature-image" style="background-image: url('https://khangey.github.io//post-images/da-xue-shi-de-yi-xie-ri-ji.jpg')">
+              <div class="feature-container" style="background-image: url('https://khangey.github.io//post-images/da-xue-shi-de-yi-xie-ri-ji.jpg')">
               </div>
             
             <div class="post-content">
@@ -144,32 +152,53 @@
 <p>“我们以注意力的睡去，呈现世界的缓慢死亡。”詹姆斯·伍德在《最接近生活的事物》中，这样告诫所有习惯成自然的人、懒惰的人、缺乏好奇心的人、不再观察事物的人。正因为这样的 2017 年，如同临冬城的“winter is coming”，来提醒着我或者他人，接下来，我们或许要面对另一种生活。</p>
 
             </div>
-          </article>
-        </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://khangey.github.io//tag/sui-yue-jing-hao" class="tag">
+                    岁月静好
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://khangey.github.io//post/2019611">
+                  <h3 class="post-title">
+                    2019.6.11
+                  </h3>
+                </a>
+              </div>
+            
 
-        
-          <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://khangey.github.io//post/2019611">
-              <h3 class="post-title">
-                2019.6.11
-              </h3>
-            </a>
+            
+
           </div>
-        
 
-        
-
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
-  <a class="rss" href="https://khangey.github.io//atom.xml" target="_blank">RSS</a>
-</div>
-
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
+        </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
   </body>
 </html>
